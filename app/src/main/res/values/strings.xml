@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyQuizApp</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="title">Guess the Movie</string>
+    <string name="title2">...by Quote!</string>
+    <string name="type_your_name">Type your name here</string>
+    <string name="play_button">Play</string>
+
+
+
+</resources>
