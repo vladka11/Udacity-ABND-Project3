@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
@@ -26,9 +27,9 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     public void getSummary(android.view.View view){
+        checkCorrectName();
         Intent ii = new Intent(this, EndActivity.class);
         ii.putExtra("pocet",pocetDobrych);
-        ii.putExtra("typyFilmov",movies);
         startActivity(ii);
     }
 
@@ -72,32 +73,24 @@ public class QuizActivity extends AppCompatActivity {
 
         // Check which checkbox was clicked
         switch(view.getId()) {
-            case R.id.action:
+            case R.id.correct1:
                 if (checked)
-                movies += "Action ";
-                else
-                    movies ="";
+                    pocetDobrych++;
                 break;
-            case R.id.drama:
+            case R.id.correct2:
                 if (checked)
-                    movies += "Drama ";
+                    pocetDobrych++;
                 break;
-            case R.id.romantic:
-                if (checked)
-                    movies += "Romantic ";
-                    break;
-            case R.id.other:
-                if (checked)
-                    movies += "Other ";
-                    break;
-            case R.id.horror:
-                if (checked)
-                    movies += "Thriller/Horror ";
-                    break;
-            case R.id.scifi:
-                if (checked)
-                    movies += "Sci-fi ";
-                    break;
+
+        }
+    }
+
+    public void checkCorrectName(){
+        TextView movie = findViewById(R.id.nemo);
+        if (movie.getText().toString().equals("finding nemo")){
+            pocetDobrych +=2;
+        } else if(movie.getText().toString().equals("nemo")){
+            pocetDobrych +=2;
         }
     }
 }
