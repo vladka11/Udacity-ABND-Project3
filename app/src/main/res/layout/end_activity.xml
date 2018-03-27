@@ -44,17 +44,6 @@
         android:textSize="40sp"
         android:onClick="jumpToStart"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/nextQuiz"
-        android:layout_gravity="center_horizontal"
-        android:text="Nidsakl"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="#4F5A69"
-        android:layout_margin="30dp"
-        android:textSize="18sp"
-        />
 
 </LinearLayout>
 </ScrollView>

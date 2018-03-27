@@ -306,7 +306,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="15dp"
             android:fontFamily="sans-serif-medium"
-            android:text="What kind of movies do you like the most?"
+            android:text="#7 Choose all correct quotes from Harry Potter movie. "
             android:textColor="#40B89A"
             android:textSize="20sp" />
 
@@ -316,48 +316,61 @@
             android:orientation="vertical">
 
             <CheckBox
-                android:id="@+id/action"
+                android:id="@+id/correct1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onCheckboxClicked"
-                android:text="Action" />
+                android:text="Never trust anything that can think for itself if you can’t see where it keeps its brain."/>
 
             <CheckBox
                 android:id="@+id/drama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onCheckboxClicked"
-                android:text="Drama" />
+                android:text="Moonlight drowns out all but the brightest stars." />
 
             <CheckBox
-                android:id="@+id/romantic"
+                android:id="@+id/correct2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onCheckboxClicked"
-                android:text="Romantic" />
-
-            <CheckBox
-                android:id="@+id/horror"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
-                android:text="Thriller/Horror" />
+                android:text="It's wingardium leviOsa, not leviosAH" />
 
             <CheckBox
                 android:id="@+id/scifi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onCheckboxClicked"
-                android:text="Sci-fi" />
+                android:text="There's no place like home." />
 
             <CheckBox
                 android:id="@+id/other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onCheckboxClicked"
-                android:text="Other" />
+                android:text="You can't handle the truth!" />
         </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#4F5A69" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="#8 Just keep swimming! Just keep swimming!"
+            android:textColor="#40B89A"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/nemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write here (lowercase) the name of the movie with that quote"
+            android:fontFamily="sans-serif-condensed"
+            />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -368,6 +381,8 @@
             android:onClick="getSummary"
             android:text="Submit"
             android:textColor="@android:color/white" />
+
+
 
     </LinearLayout>
 </ScrollView>

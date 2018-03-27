@@ -17,9 +17,8 @@ public class EndActivity extends AppCompatActivity {
         int omg = ii.getIntExtra("pocet",0);
         String filmy = ii.getStringExtra("typyFilmov");
         TextView c = findViewById(R.id.output);
-        c.setText(omg + "/6 correctly :)");
-        TextView q = findViewById(R.id.nextQuiz);
-        q.setText("Next quiz will be about: " + filmy + " movies");
+        c.setText(omg + "/10 correctly :)");
+
 
     }
 
