@@ -319,35 +319,30 @@
                 android:id="@+id/correct1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
                 android:text="Never trust anything that can think for itself if you can’t see where it keeps its brain."/>
 
             <CheckBox
-                android:id="@+id/drama"
+                android:id="@+id/notcorrect1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
                 android:text="Moonlight drowns out all but the brightest stars." />
 
             <CheckBox
                 android:id="@+id/correct2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
                 android:text="It's wingardium leviOsa, not leviosAH" />
 
             <CheckBox
-                android:id="@+id/scifi"
+                android:id="@+id/notcorrect2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
                 android:text="There's no place like home." />
 
             <CheckBox
-                android:id="@+id/other"
+                android:id="@+id/notcorrect3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
                 android:text="You can't handle the truth!" />
         </LinearLayout>
         <View

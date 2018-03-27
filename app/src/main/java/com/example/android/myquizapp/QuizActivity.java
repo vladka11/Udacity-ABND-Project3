@@ -13,8 +13,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class QuizActivity extends AppCompatActivity {
-    int pocetDobrych = 0;
-    String movies= " ";
+    int pocetDobrych;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +27,7 @@ public class QuizActivity extends AppCompatActivity {
 
     public void getSummary(android.view.View view){
         checkCorrectName();
+        checkCheckbox();
         Intent ii = new Intent(this, EndActivity.class);
         ii.putExtra("pocet",pocetDobrych);
         startActivity(ii);
@@ -67,22 +67,18 @@ public class QuizActivity extends AppCompatActivity {
         return pocetDobrych;
     }
 
-    public void onCheckboxClicked(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
+    public void checkCheckbox() {
+        CheckBox ok1 = findViewById(R.id.correct1);
+        CheckBox ok2 = findViewById(R.id.correct2);
 
-        // Check which checkbox was clicked
-        switch(view.getId()) {
-            case R.id.correct1:
-                if (checked)
-                    pocetDobrych++;
-                break;
-            case R.id.correct2:
-                if (checked)
-                    pocetDobrych++;
-                break;
+        CheckBox ko1 = findViewById(R.id.notcorrect1);
+        CheckBox ko2 = findViewById(R.id.notcorrect2);
+        CheckBox kO3 = findViewById(R.id.notcorrect3);
 
+        if(ok1.isChecked() && ok2.isChecked() && !ko1.isChecked() && !ko2.isChecked() && kO3.isChecked()) {
+            pocetDobrych += 2;
         }
+
     }
 
     public void checkCorrectName(){

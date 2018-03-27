@@ -1,9 +1,11 @@
 package com.example.android.myquizapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class EndActivity extends AppCompatActivity {
 
@@ -18,6 +20,14 @@ public class EndActivity extends AppCompatActivity {
         String filmy = ii.getStringExtra("typyFilmov");
         TextView c = findViewById(R.id.output);
         c.setText(omg + "/10 correctly :)");
+
+
+        Context context = getApplicationContext();
+        CharSequence text =  omg + "/10 correctly :)";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
 
 
     }
